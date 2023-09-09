@@ -11,11 +11,6 @@ public class UserRepository {
 
     private Map<String, String> userPasswordMap = new ConcurrentHashMap<>();
     private Map<String, List<Authorities>> userAuthoritiesMap = new ConcurrentHashMap<>();
-
-    public void addUser (String user, String password) {
-        userPasswordMap.put(user, password);
-        userAuthoritiesMap.put(user, Arrays.asList(Authorities.READ));
-    }
     public List<Authorities> getUserAuthorities(String user, String password) {
         if (!userPasswordMap.containsKey(user)) {
             return Arrays.asList();

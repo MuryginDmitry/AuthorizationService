@@ -1,3 +1,4 @@
-GET localhost:8080/authorize?user=user1&password=password1
+GET localhost:8080/authorize?user=u&password="
+
 
 ###
